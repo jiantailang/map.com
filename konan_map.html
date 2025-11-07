@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_18e0d265ca95631aa8dc4ff7757824f2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<script>
+(function() {
+  var ownerMap = {};
+
+  if(!ownerMap['田中 太郎']) ownerMap['田中 太郎'] = [];
+ownerMap['田中 太郎'].push(marker_8209a90985015324272e02aa8c82458f);
+marker_8209a90985015324272e02aa8c82458f.originalColor = 'red';
+if(!ownerMap['田中 太郎']) ownerMap['田中 太郎'] = [];
+ownerMap['田中 太郎'].push(marker_586bcdb935c152918fad2ac88a98e21b);
+marker_586bcdb935c152918fad2ac88a98e21b.originalColor = 'red';
+if(!ownerMap['鈴木 一郎']) ownerMap['鈴木 一郎'] = [];
+ownerMap['鈴木 一郎'].push(marker_984fc719753e6ed2eaa7b38e7d182fb1);
+marker_984fc719753e6ed2eaa7b38e7d182fb1.originalColor = 'orange';
+if(!ownerMap['鈴木 一郎']) ownerMap['鈴木 一郎'] = [];
+ownerMap['鈴木 一郎'].push(marker_49642cce5aa5f8110fde3e0ce247a9e4);
+marker_49642cce5aa5f8110fde3e0ce247a9e4.originalColor = 'green';
+if(!ownerMap['佐藤 花子']) ownerMap['佐藤 花子'] = [];
+ownerMap['佐藤 花子'].push(marker_ebd5aa043bb07747c03bc617151a3b5d);
+marker_ebd5aa043bb07747c03bc617151a3b5d.originalColor = 'green';
+marker_8209a90985015324272e02aa8c82458f.on('mouseover', function(e) { highlightOwner('田中 太郎', true); });
+marker_8209a90985015324272e02aa8c82458f.on('mouseout', function(e) { highlightOwner('田中 太郎', false); });
+marker_586bcdb935c152918fad2ac88a98e21b.on('mouseover', function(e) { highlightOwner('田中 太郎', true); });
+marker_586bcdb935c152918fad2ac88a98e21b.on('mouseout', function(e) { highlightOwner('田中 太郎', false); });
+marker_984fc719753e6ed2eaa7b38e7d182fb1.on('mouseover', function(e) { highlightOwner('鈴木 一郎', true); });
+marker_984fc719753e6ed2eaa7b38e7d182fb1.on('mouseout', function(e) { highlightOwner('鈴木 一郎', false); });
+marker_49642cce5aa5f8110fde3e0ce247a9e4.on('mouseover', function(e) { highlightOwner('鈴木 一郎', true); });
+marker_49642cce5aa5f8110fde3e0ce247a9e4.on('mouseout', function(e) { highlightOwner('鈴木 一郎', false); });
+marker_ebd5aa043bb07747c03bc617151a3b5d.on('mouseover', function(e) { highlightOwner('佐藤 花子', true); });
+marker_ebd5aa043bb07747c03bc617151a3b5d.on('mouseout', function(e) { highlightOwner('佐藤 花子', false); });
+
+  function highlightOwner(owner, on) {
+    var arr = ownerMap[owner];
+    if(!arr) return;
+    arr.forEach(function(m) {
+      if(on) {
+        m.setIcon(L.AwesomeMarkers.icon({icon: 'leaf', prefix: 'fa', markerColor: 'blue'}));
+      } else {
+        var orig = m.originalColor || 'green';
+        m.setIcon(L.AwesomeMarkers.icon({icon: 'leaf', prefix: 'fa', markerColor: orig}));
+      }
+    });
+  }
+})();
+</script>
+    
+            <div class="folium-map" id="map_18e0d265ca95631aa8dc4ff7757824f2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_18e0d265ca95631aa8dc4ff7757824f2 = L.map(
+                "map_18e0d265ca95631aa8dc4ff7757824f2",
+                {
+                    center: [35.3338, 136.8668],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5f1fb7756c5ff0b9bde7cdee8dd122bd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5f1fb7756c5ff0b9bde7cdee8dd122bd.addTo(map_18e0d265ca95631aa8dc4ff7757824f2);
+        
+    
+            var marker_8209a90985015324272e02aa8c82458f = L.marker(
+                [35.345, 136.87],
+                {
+}
+            ).addTo(map_18e0d265ca95631aa8dc4ff7757824f2);
+        
+    
+            var icon_a84999b27da6f1191174187fc06899af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85ff2731474b522fe162268fd067fc0f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d158c5d6c34267b1aba769e03c8c53da = $(`<div id="html_d158c5d6c34267b1aba769e03c8c53da" style="width: 100.0%; height: 100.0%;">     <div style="min-width:200px">       <b>所有者: 田中 太郎 (75歳)</b><br>       所在地: 草井町100番地 (A-1)<br>       <hr style="margin:6px 0;">       <b>土地の意向: 売りたい</b><br>       <b>人手の状況: 人手不足</b><br>       <hr style="margin:6px 0;">       <div style="font-size:90%;">プロフィール:<br>後継者不在。土地をまとめて手放したい。</div>     </div>     </div>`)[0];
+                popup_85ff2731474b522fe162268fd067fc0f.setContent(html_d158c5d6c34267b1aba769e03c8c53da);
+            
+        
+
+        marker_8209a90985015324272e02aa8c82458f.bindPopup(popup_85ff2731474b522fe162268fd067fc0f)
+        ;
+
+        
+    
+    
+            marker_8209a90985015324272e02aa8c82458f.bindTooltip(
+                `<div>
+                     田中 太郎 の土地 (草井町100番地 (A-1))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8209a90985015324272e02aa8c82458f.setIcon(icon_a84999b27da6f1191174187fc06899af);
+            
+    
+            var marker_586bcdb935c152918fad2ac88a98e21b = L.marker(
+                [35.3455, 136.871],
+                {
+}
+            ).addTo(map_18e0d265ca95631aa8dc4ff7757824f2);
+        
+    
+            var icon_14d667704a47522ece17b68eba6b70a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05130cb6da7711bcffe2e0d4b5e43583 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9794e8b8d2e997adad25f3187cc50c66 = $(`<div id="html_9794e8b8d2e997adad25f3187cc50c66" style="width: 100.0%; height: 100.0%;">     <div style="min-width:200px">       <b>所有者: 田中 太郎 (75歳)</b><br>       所在地: 草井町105番地 (A-2)<br>       <hr style="margin:6px 0;">       <b>土地の意向: 売りたい</b><br>       <b>人手の状況: 人手不足</b><br>       <hr style="margin:6px 0;">       <div style="font-size:90%;">プロフィール:<br>後継者不在。土地をまとめて手放したい。</div>     </div>     </div>`)[0];
+                popup_05130cb6da7711bcffe2e0d4b5e43583.setContent(html_9794e8b8d2e997adad25f3187cc50c66);
+            
+        
+
+        marker_586bcdb935c152918fad2ac88a98e21b.bindPopup(popup_05130cb6da7711bcffe2e0d4b5e43583)
+        ;
+
+        
+    
+    
+            marker_586bcdb935c152918fad2ac88a98e21b.bindTooltip(
+                `<div>
+                     田中 太郎 の土地 (草井町105番地 (A-2))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_586bcdb935c152918fad2ac88a98e21b.setIcon(icon_14d667704a47522ece17b68eba6b70a1);
+            
+    
+            var marker_984fc719753e6ed2eaa7b38e7d182fb1 = L.marker(
+                [35.342, 136.872],
+                {
+}
+            ).addTo(map_18e0d265ca95631aa8dc4ff7757824f2);
+        
+    
+            var icon_7f8e791778739520472e5f0482a269ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b147f4eb4a8d43d2777f07be3523bfb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_59007e42aeb53a6230308ea9794a80d4 = $(`<div id="html_59007e42aeb53a6230308ea9794a80d4" style="width: 100.0%; height: 100.0%;">     <div style="min-width:200px">       <b>所有者: 鈴木 一郎 (52歳)</b><br>       所在地: 草井町110番地 (B-1)<br>       <hr style="margin:6px 0;">       <b>土地の意向: 売りたくない</b><br>       <b>人手の状況: 人手不足</b><br>       <hr style="margin:6px 0;">       <div style="font-size:90%;">プロフィール:<br>特産のネギを栽培。収穫期に人手不足。</div>     </div>     </div>`)[0];
+                popup_9b147f4eb4a8d43d2777f07be3523bfb.setContent(html_59007e42aeb53a6230308ea9794a80d4);
+            
+        
+
+        marker_984fc719753e6ed2eaa7b38e7d182fb1.bindPopup(popup_9b147f4eb4a8d43d2777f07be3523bfb)
+        ;
+
+        
+    
+    
+            marker_984fc719753e6ed2eaa7b38e7d182fb1.bindTooltip(
+                `<div>
+                     鈴木 一郎 の土地 (草井町110番地 (B-1))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_984fc719753e6ed2eaa7b38e7d182fb1.setIcon(icon_7f8e791778739520472e5f0482a269ca);
+            
+    
+            var marker_49642cce5aa5f8110fde3e0ce247a9e4 = L.marker(
+                [35.3425, 136.873],
+                {
+}
+            ).addTo(map_18e0d265ca95631aa8dc4ff7757824f2);
+        
+    
+            var icon_2a9c1f46ff82b7670b1d59a17dcee94c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70e17fb35e95a5562892b23d9e3494f3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b811242556f68aea7bd3fc0e6beacdae = $(`<div id="html_b811242556f68aea7bd3fc0e6beacdae" style="width: 100.0%; height: 100.0%;">     <div style="min-width:200px">       <b>所有者: 鈴木 一郎 (52歳)</b><br>       所在地: 草井町112番地 (B-2)<br>       <hr style="margin:6px 0;">       <b>土地の意向: 売りたくない</b><br>       <b>人手の状況: 人手は足りている</b><br>       <hr style="margin:6px 0;">       <div style="font-size:90%;">プロフィール:<br>特産のネギを栽培。収穫期に人手不足。</div>     </div>     </div>`)[0];
+                popup_70e17fb35e95a5562892b23d9e3494f3.setContent(html_b811242556f68aea7bd3fc0e6beacdae);
+            
+        
+
+        marker_49642cce5aa5f8110fde3e0ce247a9e4.bindPopup(popup_70e17fb35e95a5562892b23d9e3494f3)
+        ;
+
+        
+    
+    
+            marker_49642cce5aa5f8110fde3e0ce247a9e4.bindTooltip(
+                `<div>
+                     鈴木 一郎 の土地 (草井町112番地 (B-2))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49642cce5aa5f8110fde3e0ce247a9e4.setIcon(icon_2a9c1f46ff82b7670b1d59a17dcee94c);
+            
+    
+            var marker_ebd5aa043bb07747c03bc617151a3b5d = L.marker(
+                [35.34, 136.874],
+                {
+}
+            ).addTo(map_18e0d265ca95631aa8dc4ff7757824f2);
+        
+    
+            var icon_e7187470af10a041e38dc23f85edf68b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6dfa78480e65f260aba5f9d5a8c9411c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_15db94f89086a34ff84beb77995d452f = $(`<div id="html_15db94f89086a34ff84beb77995d452f" style="width: 100.0%; height: 100.0%;">     <div style="min-width:200px">       <b>所有者: 佐藤 花子 (43歳)</b><br>       所在地: 草井町120番地 (C-1)<br>       <hr style="margin:6px 0;">       <b>土地の意向: 売りたくない</b><br>       <b>人手の状況: 人手は足りている</b><br>       <hr style="margin:6px 0;">       <div style="font-size:90%;">プロフィール:<br>兼業農家。現状維持で満足。</div>     </div>     </div>`)[0];
+                popup_6dfa78480e65f260aba5f9d5a8c9411c.setContent(html_15db94f89086a34ff84beb77995d452f);
+            
+        
+
+        marker_ebd5aa043bb07747c03bc617151a3b5d.bindPopup(popup_6dfa78480e65f260aba5f9d5a8c9411c)
+        ;
+
+        
+    
+    
+            marker_ebd5aa043bb07747c03bc617151a3b5d.bindTooltip(
+                `<div>
+                     佐藤 花子 の土地 (草井町120番地 (C-1))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebd5aa043bb07747c03bc617151a3b5d.setIcon(icon_e7187470af10a041e38dc23f85edf68b);
+            
+</script>
+</html>
